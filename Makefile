@@ -6,7 +6,7 @@
 #    By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/30 16:08:21 by whendrik          #+#    #+#              #
-#    Updated: 2023/07/05 16:46:54 by whendrik         ###   ########.fr        #
+#    Updated: 2023/08/02 18:16:21 by whendrik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,9 @@ AR = ar rc
 NAME = push_swap
 LIBFT = libft/libft.a
 SRC_DIR =src
-SRC_FILES= intake.c 
+SRC_FILES= main.c split_join.c error_handler.c init_stack.c free.c \
+			rotate.c swap.c reverse_rotate.c index.c sort.c push.c \
+			utils.c simple_sort.c 
 
 OBJ_DIR = obj
 INC_DIR = includes

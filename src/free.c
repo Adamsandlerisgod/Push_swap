@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/23 19:18:25 by whendrik          #+#    #+#             */
-/*   Updated: 2023/07/25 11:53:45 by whendrik         ###   ########.fr       */
+/*   Created: 2023/07/25 11:01:56 by whendrik          #+#    #+#             */
+/*   Updated: 2023/08/02 20:44:24 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+void	free_2d_array(char **array)
 {
 	int	i;
 
 	i = 0;
-	if (lst == NULL)
-		return (0);
-	while (lst)
+	while (array[i])
+		free(array[i++]);
+	free(array);
+}
+
+void	free_stack(t_stack *stack)
+{
+	t_stack	*tmp;
+
+	while (stack)
 	{
-		lst = lst -> next;
-		i++;
+		tmp = stack->next;
+		free(stack);
+		stack = tmp;
 	}
-	return (i);
 }

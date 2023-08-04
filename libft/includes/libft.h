@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 12:10:35 by whendrik          #+#    #+#             */
-/*   Updated: 2023/06/08 17:20:40 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/07/25 10:50:31 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct s_list
 
 /* part 1 & 2 */
 int				ft_atoi(const char *str);
+long			ft_atol(const char *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t count, size_t size);
 int				ft_isalnum(int c);
