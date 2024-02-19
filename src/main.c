@@ -6,23 +6,11 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 15:40:26 by whendrik          #+#    #+#             */
-/*   Updated: 2023/08/03 18:07:47 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/08/04 13:37:57 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
-
-void	printlist(t_stack *head)
-{
-	t_stack	*tmp;
-
-	tmp = head;
-	while (tmp != NULL)
-	{
-		printf("value: %d || index: %d\n", tmp->value, tmp->index);
-		tmp = tmp->next;
-	}
-}
 
 void	sort(t_stack **stack_a, t_stack **stack_b)
 {
@@ -41,8 +29,6 @@ int	main(int ac, char **argv)
 	split = NULL;
 	stack_a = NULL;
 	stack_b = NULL;
-	if ((ac < 2))
-		exit (1);
 	error_handling(ac, argv);
 	split = split_join(ac, argv);
 	init_stack(&stack_a, split);

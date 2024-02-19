@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/08 16:08:04 by whendrik          #+#    #+#             */
-/*   Updated: 2023/08/03 15:41:18 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/08/07 18:20:00 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,7 @@ void	free_stack(t_stack *stack);
 int		in_order(t_stack **stack_a);
 int		get_distance(t_stack **stack_a, int index);
 int		ft_get_min(t_stack **stack, int val);
+int		ft_isspace(char a);
+int		extra_check(char *line);
 
 #endif

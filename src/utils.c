@@ -6,7 +6,7 @@
 /*   By: whendrik <whendrik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/01 19:26:38 by whendrik          #+#    #+#             */
-/*   Updated: 2023/08/02 15:42:25 by whendrik         ###   ########.fr       */
+/*   Updated: 2023/08/07 18:52:38 by whendrik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,32 @@ int	ft_get_min(t_stack **stack, int val)
 			min = top->index;
 	}
 	return (min);
+}
+
+int	ft_isspace(char a)
+{
+	if ((a >= 9 && a <= 13) || a == 32)
+		return (1);
+	return (0);
+}
+
+int	extra_check(char *line)
+{
+	int	i;
+
+	i = 0;
+	while (line[i] != '\0')
+	{
+		if (!(ft_isdigit(line[i])) && !(ft_isspace(line[i]))
+			&& !(line[i] == '+' || line[i] == '-'))
+			return (0);
+		if (line[i] == '+' || line[i] == '-')
+		{
+			i++;
+			if (!(ft_isdigit(line[i])))
+				return (0);
+		}
+		i++;
+	}
+	return (1);
 }
